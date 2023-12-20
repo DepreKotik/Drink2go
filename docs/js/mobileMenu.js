@@ -1,0 +1,1 @@
+const headerButton=document.querySelector(".header__button"),headerListPage=document.querySelector(".header__list--page"),initMobileMenu=()=>{headerButton.addEventListener("click",(()=>{headerListPage.classList.toggle("header__list--open"),headerButton.classList.toggle("header__button--active")}))};export{initMobileMenu};
