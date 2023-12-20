@@ -1,0 +1,180 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
+}
+
+.form__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
+}
+
+.form__input-tire {
+  color: $base-grey;
+  font-size: 25px;
+}
+
+.form__input-price::-webkit-outer-spin-button,
+.form__input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__input-price {
+  border-radius: 4px;
+  border: 2px solid $primary-lighter;
+  background-color: $base-white;
+  padding: 8px 10px;
+  text-align: center;
+  width: 118px;
+  color: $base-black;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  &:focus-visible {
+    border-color: $primary-darker;
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.form__button {
+  display: block;
+  border-radius: 4px;
+  align-items: center;
+  padding: 8px 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 280px;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+  }
+
+  &--reset {
+    color: $base-primary;
+    background-color: $base-white;
+
+    &:hover {
+      color: $base-white;
+    }
+
+    &:active {
+      color: $base-white;
+    }
+
+    &:disabled {
+      color: $base-white;
+    }
+  }
+
+  &--submit {
+    color: $base-white;
+    background-color: $base-primary;
+  }
+}
+
+.form__range {
+  margin: 12px 12px 32px 12px;
+}

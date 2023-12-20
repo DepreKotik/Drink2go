@@ -1,0 +1,98 @@
+.pagination__button {
+  background-color: $base-white;
+  border-radius: 4px;
+  color: $base-primary;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    padding: 8px 20px;
+
+    & svg {
+      display: none;
+    }
+  }
+
+  &--left svg {
+    transform: rotate(180deg);
+  }
+}
+
+.pagination__text {
+  display: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $base-white;
+  border-radius: 4px;
+  color: $base-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+  }
+
+  &--active {
+    background-color: transparent;
+    color: $base-black;
+    font-weight: 600;
+
+    &:hover {
+      background-color: transparent;
+      color: $base-black;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $base-black;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $base-black;
+    }
+  }
+}

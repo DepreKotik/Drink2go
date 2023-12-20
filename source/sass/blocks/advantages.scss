@@ -1,0 +1,115 @@
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.advantages__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+.advantages__item {
+  padding-top: 68px;
+  background-image: url("../../images/svg/advanteges-speed.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 82px;
+    background-position: top 0 left 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 68px 0 0 0;
+    background-position: top 0 center;
+  }
+}
+
+.advantages__item:nth-child(2) {
+  background-image: url("../../images/svg/advanteges-convenience.svg");
+}
+
+.advantages__item:nth-child(3) {
+  background-image: url("../../images/svg/advanteges-cheerfulness.svg");
+}
+
+.advantages__item:nth-child(4) {
+  background-image: url("../../images/svg/advanteges-eco.svg");
+}
+
+.advantages__term {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.advantages__description {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}

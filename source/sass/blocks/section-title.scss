@@ -1,0 +1,16 @@
+.section-title {
+  color: $base-primary;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+
+  &--intro-mod {
+    @media (min-width: $desktop-width) {
+      text-align: start;
+    }
+  }
+}

@@ -1,5 +1,169 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.header__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.header__logo-link {
+  padding: 12px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.header__description {
+  display: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.header__button {
+  border: none;
+  width: 60px;
+  height: 64px;
+  background-image: url("../../images/svg/burger.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--active {
+    background-image: url("../../images/svg/header-close.svg");
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+
+  &--user {
+    margin-left: auto;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  &--page {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  &--open {
+    @media (max-width: $tablet-width) {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $base-white;
+      z-index: 10;
+    }
+  }
+}
+
+.header__list--open .header__link {
+  border-top: 1px solid $light-grey;
+}
+
+.header__link {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  padding: 20px;
+  text-align: center;
+
+  &--active {
+    color: $base-primary;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $base-primary;
+    }
+  }
+
+  &:hover,
+  &:hover svg,
+  &:focus-visible {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+  }
+
+  &--user {
+    padding: 22px;
+
+    @media (min-width: $tablet-width) {
+      padding: 32px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+  }
+}
+
+.header__link-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
